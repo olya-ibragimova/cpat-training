@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CPAT 9-Week Training Program</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1 id="hero-title">CPAT 9-Week Training Program</h1>
+      <p id="hero-subtitle"></p>
+    </header>
+
+    <div class="progress-card">
+      <div class="progress-row">
+        <span class="num" id="progress-count">0 / 0</span>
+        <span class="label">sessions complete</span>
+      </div>
+      <div class="bar-track">
+        <div class="bar-fill" id="progress-bar-fill" style="width: 0%"></div>
+      </div>
+    </div>
+
+    <button class="today-jump" id="today-jump">&#8594; Jump to today's week</button>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="panel-program">Program</button>
+      <button class="tab-btn" data-tab="panel-reference">Guide reference</button>
+    </div>
+
+    <div class="tab-panel active" id="panel-program"></div>
+    <div class="tab-panel" id="panel-reference"></div>
+
+    <div class="footer-actions">
+      <button class="ghost-btn" id="export-btn">Export progress</button>
+      <button class="ghost-btn" id="import-btn">Import progress</button>
+      <button class="ghost-btn" id="reset-all">Reset all checkmarks</button>
+      <input type="file" id="import-input" accept="application/json" hidden />
+    </div>
+    <p class="small-print">
+      Checkmarks save automatically in this browser (localStorage) — nothing is sent anywhere.
+      They stay on this device and browser only; use Export/Import to move progress to another device
+      or back it up before clearing browser data.
+    </p>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
